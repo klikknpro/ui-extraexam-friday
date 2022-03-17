@@ -43,7 +43,7 @@ picture {
 
 /* set up the body */
 body {
-  line-height: 1.5;
+  line-height: 1.3;
   min-height: 100vh;
 }
 
@@ -141,8 +141,8 @@ nav .menu-icon {
 }
 
 .card {
-  width: 350px;
-  height: 260px;
+  width: 360px;
+  height: 270px;
   padding: 40px;
   position: relative;
 
@@ -151,6 +151,7 @@ nav .menu-icon {
 }
 
 .card .sub {
+  font-family: var(--ff-montserrat);
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.2em;
@@ -159,8 +160,10 @@ nav .menu-icon {
 }
 
 .card .title {
+  font-family: var(--ff-montserrat);
   font-size: 36px;
   font-weight: 700;
+  padding-bottom: 20px;
 }
 
 .card .text {
@@ -175,4 +178,30 @@ nav .menu-icon {
   font-size: 24px;
   color: var(--clr-light);
   text-align: center;
+}
+
+.card button {
+  width: 100%;
+  height: 40px;
+
+  position: absolute;
+  left: 0;
+  bottom: -42px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: var(--clr-light);
+  border: none;
+
+  font-size: 14px;
+}
+
+button span {
+  font-size: 18px;
+}
+
+.card button:hover {
+  border-bottom: 1px solid var(--clr-dark);
 }
