@@ -36,6 +36,27 @@ const companies = [
   },
 ];
 
-function init() {}
+const companyCard = (company) => {
+  return `
+    <div class="card">
+      <h3 class="sub">${company.sub}</h3>
+      <h2 class="title">${company.title}</h2>
+      <p class="text">${company.text}</p>
+      <button>
+        Visit
+        <span class="material-icons"> arrow_forward </span>
+      </button>
+    </div>
+  `;
+};
+
+function init() {
+  const main = document.querySelector(".main");
+
+  for (let i = 0; i < companies.length; i++) {
+    const company = companies[i];
+    main.insertAdjacentHTML("beforeend", companyCard(company));
+  }
+}
 
 window.addEventListener("load", init);
